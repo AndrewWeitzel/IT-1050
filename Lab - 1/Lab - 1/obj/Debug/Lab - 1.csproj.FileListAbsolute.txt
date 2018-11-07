@@ -1,0 +1,7 @@
+X:\GitHub\AW\IT-1050\Lab - 1\Lab - 1\bin\Debug\Lab - 1.exe.config
+X:\GitHub\AW\IT-1050\Lab - 1\Lab - 1\bin\Debug\Lab - 1.exe
+X:\GitHub\AW\IT-1050\Lab - 1\Lab - 1\bin\Debug\Lab - 1.pdb
+X:\GitHub\AW\IT-1050\Lab - 1\Lab - 1\obj\Debug\Lab - 1.csprojAssemblyReference.cache
+X:\GitHub\AW\IT-1050\Lab - 1\Lab - 1\obj\Debug\Lab - 1.csproj.CoreCompileInputs.cache
+X:\GitHub\AW\IT-1050\Lab - 1\Lab - 1\obj\Debug\Lab - 1.exe
+X:\GitHub\AW\IT-1050\Lab - 1\Lab - 1\obj\Debug\Lab - 1.pdb

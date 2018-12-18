@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Lab - 4")]
+[assembly: AssemblyTitle("Loops Arrays Practice Assignment")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Lab - 4")]
+[assembly: AssemblyProduct("Loops Arrays Practice Assignment")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("752c61b5-5c88-4276-b916-c80efe630451")]
+[assembly: Guid("c35ce9da-c8e0-4e82-b3cf-27787db61e5e")]
 
 // Version information for an assembly consists of the following four values:
 //

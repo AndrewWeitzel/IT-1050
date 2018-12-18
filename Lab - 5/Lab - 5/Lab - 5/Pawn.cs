@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab___4
+namespace Lab___5
 {
-    class Program
+    public class Pawn 
     {
-        static void Main(string[] args)
+        public Pawn(string name, char boardValue)
         {
+
         }
     }
 }

@@ -9,7 +9,8 @@ namespace Lab___4
     class Program
     {
         static void Main(string[] args)
-        {//Ticket Types
+        {
+            //Ticket Types
             PurchaseItem childTixMat = new PurchaseItem("Child Matinee Ticket", 3.99, 0);
             PurchaseItem childTixEve = new PurchaseItem("Child Evening Ticket", 3.99, 0);
             PurchaseItem adultTixMat = new PurchaseItem("Adult Matinee Ticket", 5.99, 0);
@@ -22,10 +23,7 @@ namespace Lab___4
             PurchaseItem hotDog = new PurchaseItem("Hot Dog", 3.99, 0);
             PurchaseItem popcorn = new PurchaseItem("Popcorn", 4.50, 0);
             PurchaseItem candy = new PurchaseItem("Candy", 1.99, 0);
-
-
-
-
+            //Run the program
             MovieMethods transation = new MovieMethods();
             transation.TicketBuy(childTixMat, adultTixMat, seniorTixMat, childTixEve, adultTixEve, seniorTixEve);
             transation.Concessions(smSoda, lgSoda, hotDog, popcorn, candy);

@@ -1,7 +1,5 @@
 ﻿namespace Final
 {
-    using System.Collections;
-
     class Elevator
     {
 

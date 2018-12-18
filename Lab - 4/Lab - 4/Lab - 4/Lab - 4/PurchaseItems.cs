@@ -12,8 +12,5 @@
             cost = itemCost;
             qty = itemQty;
         }
-
-
-
     }
 }

@@ -10,14 +10,10 @@ namespace Lab___5
     {
         public const string symbol = "X";
         public const string space = " ";
-        private int currentX;
-        private int currentY;
-        private int inputX;
-        private int inputY;
+        
         public bool endProgram;
         public static string[,] chessPiece = new string[ChessBoard.xValue, ChessBoard.yValue];
-        //public static string[,] chessPieces;
-        //public string[,] InitialPosition;
+        
 
         public ChessPiece()
         {
@@ -105,27 +101,25 @@ namespace Lab___5
             System.Console.WriteLine("Enter Current X-Axis Coordinate");
             CurrentX = System.Console.ReadLine().ToUpper().Substring(0, 1);
             int xValToInt1 = HeaderFromLettersToNumbers(CurrentX);
-            if (endProgram == false)
-            {
+
                 System.Console.WriteLine("Enter Current Y-Axis Coordinate");
                 CurrentY = int.Parse(System.Console.ReadLine());
                 CurrentY = CurrentY - 1;
-                if (currentY <= 0 && currentY >= 7)
+                if (CurrentY <= 0 && CurrentY >= 7)
                 {
-
+                    
                 }
                 else
                 {
                     endProgram = true;
                 }
-                if (endProgram == false)
-                {
+
                     System.Console.WriteLine("Enter Target X-Axis Coordinate");
                     TargetX = System.Console.ReadLine().ToUpper().Substring(0, 1);
                     int xValToInt2 = HeaderFromLettersToNumbers(TargetX);
 
-                    if (endProgram == false)
-                    {
+
+
                         System.Console.WriteLine("Enter Target Y-Axis Coordinate");
                         TargetY = int.Parse(System.Console.ReadLine());
                         TargetY = TargetY - 1;
@@ -137,12 +131,29 @@ namespace Lab___5
                         {
                             endProgram = true;
                         }
-                        //I dont know why I had to flip flop X and Y?
-                        chessPiece[CurrentY, xValToInt1] = space;
-                        chessPiece[TargetY, xValToInt2] = symbol;
-                    }
-                }
+
+            if (CurrentY < 0 || CurrentY > 7 || xValToInt1 < 0 || xValToInt1 > 7)
+            {
+                System.Console.WriteLine("The current chesspiece does not exist.");
+                this.Exit();
             }
+            if (TargetY < 0 || TargetY > 7 || xValToInt2 < 0 || xValToInt2 > 7)
+            {
+                System.Console.WriteLine("The target chessboard space does not exist.");
+                this.Exit();
+            }
+            chessPiece[CurrentY, xValToInt1] = space;
+                        chessPiece[TargetY, xValToInt2] = symbol;
+        }
+        public void Exit()
+        {
+            System.Console.WriteLine("Index out of range! \n" + "Closing program. \n" + "Press any key...");
+            
+            System.Console.ReadLine();
+            System.Console.ReadKey();
+            Environment.Exit(0);
         }
     }
+
 }
+

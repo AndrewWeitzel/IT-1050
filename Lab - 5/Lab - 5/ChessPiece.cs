@@ -46,10 +46,11 @@ namespace Lab___5
         }
         public int HeaderFromLettersToNumbers(string xValue)
         {
-            int x = 0;
+            int x = 1000;
             if (xValue == "A")
             {
                 x = 0;
+                return x;
             }
             if (xValue == "B")
             {
@@ -86,24 +87,16 @@ namespace Lab___5
                 x = 7;
                 return x;
             }
-            if (xValue != "A" && 
-                xValue != "B" &&
-                xValue != "C" &&
-                xValue != "D" &&
-                xValue != "E" &&
-                xValue != "F" &&
-                xValue != "G" &&
-                xValue != "H" 
-                )
+            if(xValue!="A"&&xValue!="B"&&xValue!="C"&&xValue!="D"&&xValue!="E"&&xValue!="F"&&xValue!="G"&&xValue!="H")
             {
-                this.Exit();
+                endProgram = true;
             }
-            return x;
+                return x;
         }
 
-        public void MovePiece(bool passTheBool)
+        public void MovePiece()
         {
-            //string CurrentX, int CurrentY, string TargetX, int TargetY  FORMER PARAMETERS
+
             string CurrentX;
             int CurrentY;
             string TargetX;
@@ -112,47 +105,44 @@ namespace Lab___5
             System.Console.WriteLine("Enter Current X-Axis Coordinate");
             CurrentX = System.Console.ReadLine().ToUpper().Substring(0, 1);
             int xValToInt1 = HeaderFromLettersToNumbers(CurrentX);
-
-            System.Console.WriteLine("Enter Current Y-Axis Coordinate");
-            CurrentY = int.Parse(System.Console.ReadLine());
-            CurrentY = CurrentY - 1;
-            if (currentY <= 0 && currentY >= 7)
+            if (endProgram == false)
             {
-                passTheBool = false;
-            }
-            else
-            {
-                this.Exit();
-            }
+                System.Console.WriteLine("Enter Current Y-Axis Coordinate");
+                CurrentY = int.Parse(System.Console.ReadLine());
+                CurrentY = CurrentY - 1;
+                if (currentY <= 0 && currentY >= 7)
+                {
 
-            System.Console.WriteLine("Enter Target X-Axis Coordinate");
-            TargetX = System.Console.ReadLine().ToUpper().Substring(0, 1);
-            int xValToInt2 = HeaderFromLettersToNumbers(TargetX);
+                }
+                else
+                {
+                    endProgram = true;
+                }
+                if (endProgram == false)
+                {
+                    System.Console.WriteLine("Enter Target X-Axis Coordinate");
+                    TargetX = System.Console.ReadLine().ToUpper().Substring(0, 1);
+                    int xValToInt2 = HeaderFromLettersToNumbers(TargetX);
 
+                    if (endProgram == false)
+                    {
+                        System.Console.WriteLine("Enter Target Y-Axis Coordinate");
+                        TargetY = int.Parse(System.Console.ReadLine());
+                        TargetY = TargetY - 1;
+                        if (TargetY <= 0 && TargetY >= 7)
+                        {
 
-            System.Console.WriteLine("Enter Target Y-Axis Coordinate");
-            TargetY = int.Parse(System.Console.ReadLine());
-            TargetY = TargetY - 1;
-            if (TargetY <= 0 && TargetY >= 7)
-            {
-                passTheBool = false;
+                        }
+                        else
+                        {
+                            endProgram = true;
+                        }
+                        //I dont know why I had to flip flop X and Y?
+                        chessPiece[CurrentY, xValToInt1] = space;
+                        chessPiece[TargetY, xValToInt2] = symbol;
+                    }
+                }
             }
-            else
-            {
-                this.Exit();
-            }
-
-            //I dont know why I had to flip flop X and Y?
-            chessPiece[CurrentY, xValToInt1] = space;
-            chessPiece[TargetY, xValToInt2] = symbol;
-        }
-        public void Exit()
-        {
-            System.Console.WriteLine("Index out of range.");
-            System.Console.WriteLine("Goodbye.");
-            System.Console.ReadLine();
-            System.Console.ReadKey();
-            Environment.Exit(0);
         }
     }
 }

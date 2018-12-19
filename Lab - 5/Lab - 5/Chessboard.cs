@@ -28,16 +28,15 @@
 
         public ChessBoard()
         {
-            chessboard = new string[xValue, yValue];
-            chessPiece = new ChessPiece();
+            
         }
 
         public void PrintBoard()
         {
+         
+
             chessboard = new string[xValue, yValue];
             chessPiece = new ChessPiece();
-
-
 
             while (endProgram == false)
             {
@@ -85,8 +84,15 @@
                     }
                     System.Console.Write("+\n\n");
                     System.Console.WriteLine();
-                    chessPiece.MovePiece(endProgram);
-                    continue;
+                    chessPiece.MovePiece();
+                    if (endProgram == true)
+                    {
+                        break;
+                    }
+                    if (endProgram == false)
+                    {
+                        continue;
+                    }
                 }
                 catch
                 {

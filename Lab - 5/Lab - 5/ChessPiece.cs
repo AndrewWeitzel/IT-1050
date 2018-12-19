@@ -98,11 +98,12 @@ namespace Lab___5
             int TargetY;
 
             System.Console.WriteLine("Enter Current X-Axis Coordinate");
-            CurrentX = System.Console.ReadLine().ToUpper().Substring(0,1);
+            CurrentX = System.Console.ReadLine().ToUpper().Substring(0, 1);
             int xValToInt1 = HeaderFromLettersToNumbers(CurrentX);
 
             System.Console.WriteLine("Enter Current Y-Axis Coordinate");
             CurrentY = int.Parse(System.Console.ReadLine());
+            CurrentY = CurrentY - 1;
             if (currentY <= 0 && currentY >= 7)
             {
                 passTheBool = false;
@@ -115,10 +116,11 @@ namespace Lab___5
             System.Console.WriteLine("Enter Target X-Axis Coordinate");
             TargetX = System.Console.ReadLine().ToUpper().Substring(0, 1);
             int xValToInt2 = HeaderFromLettersToNumbers(TargetX);
-            
+
 
             System.Console.WriteLine("Enter Target Y-Axis Coordinate");
-            TargetY = (int.Parse(System.Console.ReadLine()))-1;
+            TargetY = int.Parse(System.Console.ReadLine());
+            TargetY = TargetY - 1;
             if (TargetY <= 0 && TargetY >= 7)
             {
                 passTheBool = false;
@@ -127,9 +129,9 @@ namespace Lab___5
             {
                 passTheBool = true;
             }
-            
+
             //I dont know why I had to flip flop X and Y?
-            chessPiece[CurrentY,xValToInt1 ] = space;
+            chessPiece[CurrentY, xValToInt1] = space;
             chessPiece[TargetY, xValToInt2] = symbol;
         }
     }

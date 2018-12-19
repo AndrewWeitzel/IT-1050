@@ -1,25 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lab___5
+﻿namespace Lab___5
 {
     public class ChessBoard
     {
         private string[,] chessboard;
         public const int xValue = 8;
         public const int yValue = 8;
-        public string rowBorder = ("+").PadRight(4,'-');
+        public string rowBorder = ("+").PadRight(4, '-');
         public string columnBorder = ("|");
-        public Input input;
         public ChessPiece chessPiece;
         public bool endProgram = false;
         public void ChessBoardHeader()
         {
             System.Console.WriteLine();
-            Console.WriteLine(
+            System.Console.WriteLine(
                                 (
                                 ("    ") +
                                 ("A").PadLeft(4, ' ') +
@@ -41,14 +34,14 @@ namespace Lab___5
 
         public void PrintBoard()
         {
-            chessboard = new string[xValue,yValue];
+            chessboard = new string[xValue, yValue];
             chessPiece = new ChessPiece();
 
-            
+
 
             while (endProgram == false)
             {
-                Console.Clear();
+                System.Console.Clear();
                 ChessBoardHeader();
                 try
                 {
@@ -97,11 +90,8 @@ namespace Lab___5
                 }
                 catch
                 {
-                    System.Console.WriteLine(("WT").PadRight(3,'F'));
                 }
             }
         }
-        
-        
     }
 }

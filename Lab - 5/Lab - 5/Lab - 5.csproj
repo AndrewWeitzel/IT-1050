@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{580A3B8C-2A2E-450A-8ED7-97604D207D94}</ProjectGuid>
+    <ProjectGuid>{28AEF71A-4D46-4189-9BE1-A826D02ED6F4}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Lab___5</RootNamespace>
     <AssemblyName>Lab - 5</AssemblyName>
@@ -45,7 +45,6 @@
   <ItemGroup>
     <Compile Include="Chessboard.cs" />
     <Compile Include="ChessPiece.cs" />
-    <Compile Include="Input.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -86,6 +86,18 @@ namespace Lab___5
                 x = 7;
                 return x;
             }
+            if (xValue != "A" && 
+                xValue != "B" &&
+                xValue != "C" &&
+                xValue != "D" &&
+                xValue != "E" &&
+                xValue != "F" &&
+                xValue != "G" &&
+                xValue != "H" 
+                )
+            {
+                this.Exit();
+            }
             return x;
         }
 
@@ -110,7 +122,7 @@ namespace Lab___5
             }
             else
             {
-                passTheBool = true;
+                this.Exit();
             }
 
             System.Console.WriteLine("Enter Target X-Axis Coordinate");
@@ -127,12 +139,20 @@ namespace Lab___5
             }
             else
             {
-                passTheBool = true;
+                this.Exit();
             }
 
             //I dont know why I had to flip flop X and Y?
             chessPiece[CurrentY, xValToInt1] = space;
             chessPiece[TargetY, xValToInt2] = symbol;
+        }
+        public void Exit()
+        {
+            System.Console.WriteLine("Index out of range.");
+            System.Console.WriteLine("Goodbye.");
+            System.Console.ReadLine();
+            System.Console.ReadKey();
+            Environment.Exit(0);
         }
     }
 }
